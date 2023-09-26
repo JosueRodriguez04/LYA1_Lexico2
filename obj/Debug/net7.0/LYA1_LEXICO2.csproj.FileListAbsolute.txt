@@ -1,0 +1,14 @@
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\bin\Debug\net7.0\LYA1_LEXICO2.exe
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\bin\Debug\net7.0\LYA1_LEXICO2.deps.json
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\bin\Debug\net7.0\LYA1_LEXICO2.runtimeconfig.json
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\bin\Debug\net7.0\LYA1_LEXICO2.dll
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\bin\Debug\net7.0\LYA1_LEXICO2.pdb
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\obj\Debug\net7.0\LYA1_LEXICO2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\obj\Debug\net7.0\LYA1_LEXICO2.AssemblyInfoInputs.cache
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\obj\Debug\net7.0\LYA1_LEXICO2.AssemblyInfo.cs
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\obj\Debug\net7.0\LYA1_LEXICO2.csproj.CoreCompileInputs.cache
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\obj\Debug\net7.0\LYA1_LEXICO2.dll
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\obj\Debug\net7.0\refint\LYA1_LEXICO2.dll
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\obj\Debug\net7.0\LYA1_LEXICO2.pdb
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\obj\Debug\net7.0\LYA1_LEXICO2.genruntimeconfig.cache
+C:\Users\J Alvarez\Documents\LYA1_LEXICO2\obj\Debug\net7.0\ref\LYA1_LEXICO2.dll
