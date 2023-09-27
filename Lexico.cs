@@ -53,16 +53,28 @@ namespace LYA1_Lexico2
                             estado = 8;
                         else if (c == ';')
                             estado = 10;
-                        else if (c == '%')
+                        else if (c == '&')
                             estado = 11;
-                        else if(c == '|')
-                        estado = 12;
-                        else if(c=='!')
-                        estado = 13;
+                        else if (c == '|')
+                            estado = 12;
+                        else if (c == '!')
+                            estado = 13;
+                        else if (c == '<')
+                            estado = 16;
+                        else if (c == '>')
+                            estado = 17;
+                        else if (c == '+')
+                            estado = 19;
+                        else if (c == '-')
+                            estado = 20;
 
                         else
                             estado = 27;
                         break;
+
+
+
+
                     case 1:
                         setClasificacion(Tipos.Identificador);
                         if (!char.IsLetterOrDigit(c))
@@ -128,7 +140,7 @@ namespace LYA1_Lexico2
                         break;
                     case 11:
                         setClasificacion(Tipos.Caracter);
-                        if (c == '%')
+                        if (c == '&')
                             estado = 14;
                         break;
                     case 12:
@@ -146,17 +158,57 @@ namespace LYA1_Lexico2
                         estado = F;
                         break;
                     case 15:
-
+                        setClasificacion(Tipos.OpRelacional);
+                        estado = F;
                         break;
                     case 16:
-
+                        setClasificacion(Tipos.OpRelacional);
+                        if (c == '=')
+                            estado = 18;
+                        else
+                            estado = F;
                         break;
                     case 17:
-
+                        setClasificacion(Tipos.OpRelacional);
+                        if (c == '>')
+                            estado = 18;
+                        else if (c == '=')
+                            estado = 18;
+                        else
+                            estado = F;
                         break;
                     case 18:
+                        setClasificacion(Tipos.OpRelacional);
+                        estado = F;
+                        break;
+                    case 19:
+                        setClasificacion(Tipos.OpTermino);
+                        if (c == '+')
+                            estado = 21;
+                        else if (c == '=')
+                            estado = 21;
+                        else
+                            estado = F;
+                        break;
+                    case 20:
+                        setClasificacion(Tipos.OpTermino);
+                        if (c == '-')
+                            estado = 21;
+                        else if (c == '=')
+                            estado = 21;
+                        else
+                            estado = F;
+                        break;
+                    case 21:
+                        setClasificacion(Tipos.IncTermino);
+                        estado = F;
+                        break;
+                    case 22:
 
                         break;
+
+
+
 
                     case 27:
                         estado = F;

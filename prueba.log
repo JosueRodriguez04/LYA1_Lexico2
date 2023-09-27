@@ -1,6 +1,6 @@
 x26 = Identificador
-= = Caracter
+= = Asignacion
 1.5e-8 = Numero
-; = Caracter
-= = Caracter
-= = Caracter
+; = Numero
+== = OpRelacional
+; = OpRelacional
