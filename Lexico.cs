@@ -67,6 +67,15 @@ namespace LYA1_Lexico2
                             estado = 19;
                         else if (c == '-')
                             estado = 20;
+                        else if (c == '%')
+                            estado = 22;
+                        else if (c == '/')
+                            estado = 22;
+                        else if (c == '*')
+                            estado = 22;
+                        else if (c == '?')
+                            estado = 24;
+
 
                         else
                             estado = 27;
@@ -142,16 +151,22 @@ namespace LYA1_Lexico2
                         setClasificacion(Tipos.Caracter);
                         if (c == '&')
                             estado = 14;
+                        else
+                            estado = F;
                         break;
                     case 12:
                         setClasificacion(Tipos.Caracter);
                         if (c == '|')
                             estado = 14;
+                        else
+                            estado = F;
                         break;
                     case 13:
                         setClasificacion(Tipos.Caracter);
                         if (c == '=')
-                            estado = 14;
+                            estado = 15;
+                        else
+                            estado = F;
                         break;
                     case 14:
                         setClasificacion(Tipos.OpLogico);
@@ -204,7 +219,19 @@ namespace LYA1_Lexico2
                         estado = F;
                         break;
                     case 22:
-
+                        setClasificacion(Tipos.OpFactor);
+                        if (c == '=')
+                            estado = 23;
+                        else
+                            estado = F;
+                        break;
+                    case 23:
+                        setClasificacion(Tipos.IncFactor);
+                        estado = F;
+                        break;
+                    case 24:
+                        setClasificacion(Tipos.OpTernario);
+                        estado = F;
                         break;
 
 
@@ -213,7 +240,6 @@ namespace LYA1_Lexico2
                     case 27:
                         estado = F;
                         break;
-
                 }
                 if (estado >= 0)
                 {
