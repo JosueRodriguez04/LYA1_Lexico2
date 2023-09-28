@@ -8,12 +8,12 @@ x26 = Identificador
 & = Caracter
 || = OpLogico
 | = Caracter
-! = Caracter
+! = OpLogico
 != = OpRelacional
 < = OpRelacional
 < = OpRelacional
-< = OpRelacional
->> = OpRelacional
+<> = OpRelacional
+> = OpRelacional
 > = OpRelacional
 >= = OpRelacional
 <= = OpRelacional
@@ -30,12 +30,8 @@ x26 = Identificador
 % = OpFactor
 %= = IncFactor
 ? = OpTernario
-" = OpTernario
-" = OpTernario
-" = OpTernario
-Hola = Identificador
-mundo = Identificador
-" = Identificador
-{ = Identificador
-} = Identificador
-" = Identificador
+"" = Cadena
+"Hola mundo" = Cadena
+{ = Caracter
+} = Caracter
+" = Cadena

@@ -59,9 +59,9 @@ namespace LYA1_Lexico2
                             estado = 12;
                         else if (c == '!')
                             estado = 13;
-                        else if (c == '<')
-                            estado = 16;
                         else if (c == '>')
+                            estado = 16;
+                        else if (c == '<')
                             estado = 17;
                         else if (c == '+')
                             estado = 19;
@@ -75,14 +75,11 @@ namespace LYA1_Lexico2
                             estado = 22;
                         else if (c == '?')
                             estado = 24;
-
-
+                        else if (c == '"')
+                            estado = 25;
                         else
                             estado = 27;
                         break;
-
-
-
 
                     case 1:
                         setClasificacion(Tipos.Identificador);
@@ -162,7 +159,7 @@ namespace LYA1_Lexico2
                             estado = F;
                         break;
                     case 13:
-                        setClasificacion(Tipos.Caracter);
+                        setClasificacion(Tipos.OpLogico);
                         if (c == '=')
                             estado = 15;
                         else
@@ -233,11 +230,21 @@ namespace LYA1_Lexico2
                         setClasificacion(Tipos.OpTernario);
                         estado = F;
                         break;
-
-
-
-
+                    case 25:
+                        setClasificacion(Tipos.Cadena);
+                        if (c == '"')
+                            estado = 26;
+                        else if (FinArchivo())
+                            estado = E;
+                        else
+                            estado = 25;
+                        break;
+                    case 26:
+                        setClasificacion(Tipos.Cadena);
+                        estado = F;
+                        break;
                     case 27:
+                        setClasificacion(Tipos.Caracter);
                         estado = F;
                         break;
                 }
